@@ -4,9 +4,7 @@ const morgan = require('morgan');
 const bodyParse = require('body-parser')
 const path = require('path');
 
-const app = express();
-
-//appele du dossier contenant notre variable d'environnemet PORT
+const app = express()
 dotenv.config({ path: "./config.env" })
 const PORT = process.env.PORT || 8080
 
@@ -21,13 +19,9 @@ app.set('view engine', 'ejs')
 //le lien contenant les fichies ej
 //app.set('view',path.resolve(__dirname,'/views/ejs'))
 
-//disponibiliser les ressources du sites (style css,img,js)
-app.use('/css', express.static(path.resolve(__dirname, './assets/css')))
-app.use('/img', express.static(path.resolve(__dirname, './assets/img')))
-app.use('/js', express.static(path.resolve(__dirname, './assets/js')))
-
+//disponibiliser les ressources du sites (style css,img,)
 app.get('/', (req, res) => {
-    res.render('index')
+    res.send("Succefuly server")
 })
 
 app.listen(PORT, () => {
