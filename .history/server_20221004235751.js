@@ -1,13 +1,9 @@
 const express = require('express');
-const dotenv = require('dotenv')
-const morgan = require('morgan');
-
 const app = express()
-dotenv.config({ path: "./config.env" })
-const PORT = process.env.PORT || 8080
+const dotenv=require('dotenv')
 
-//les i(nfos des requetes
-app.use(morgan('tiny'))
+dotenv
+const PORT = process.env.PORT || 8080
 
 app.get('/', (req, res) => {
     res.send("Succefuly server")
