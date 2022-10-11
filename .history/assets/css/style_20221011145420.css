@@ -115,7 +115,7 @@ table {
 }
 
 .form-title {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .form-title>h2 {
@@ -196,10 +196,4 @@ table {
 
 .btns {
     background-color: blue;
-}
-
-.titles {
-    margin-left: 20px;
-    font-size: 14px;
-    letter-spacing: normal;
 }

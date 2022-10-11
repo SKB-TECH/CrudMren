@@ -36,11 +36,6 @@ app.get('/add-user', (req, res, next) => {
     next()
 })
 
-app.get('/update-user', (req, res, next) => {
-    res.render('update-user')
-    next()
-})
-
 app.listen(PORT, () => {
     console.log(`Pret au port  http://localhost:${PORT}`);
 })

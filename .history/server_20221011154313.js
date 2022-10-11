@@ -37,7 +37,7 @@ app.get('/add-user', (req, res, next) => {
 })
 
 app.get('/update-user', (req, res, next) => {
-    res.render('update-user')
+    res.render('add-user')
     next()
 })
 

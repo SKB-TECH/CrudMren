@@ -36,8 +36,8 @@ app.get('/add-user', (req, res, next) => {
     next()
 })
 
-app.get('/update-user', (req, res, next) => {
-    res.render('update-user')
+app.get('/add-user', (req, res, next) => {
+    res.render('add-user')
     next()
 })
 
