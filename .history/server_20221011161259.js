@@ -26,9 +26,7 @@ app.use('/css', express.static(path.resolve(__dirname, './assets/css')))
 app.use('/img', express.static(path.resolve(__dirname, './assets/img')))
 app.use('/js', express.static(path.resolve(__dirname, './assets/js')))
 
-// les routes
-
-app.use(require('./Server/routes/router'))
+les routes
 
 app.listen(PORT, () => {
     console.log(`Pret au port  http://localhost:${PORT}`);

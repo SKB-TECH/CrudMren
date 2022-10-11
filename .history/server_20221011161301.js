@@ -28,8 +28,6 @@ app.use('/js', express.static(path.resolve(__dirname, './assets/js')))
 
 // les routes
 
-app.use(require('./Server/routes/router'))
-
 app.listen(PORT, () => {
     console.log(`Pret au port  http://localhost:${PORT}`);
 })
