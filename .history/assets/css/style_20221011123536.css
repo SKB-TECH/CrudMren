@@ -133,7 +133,7 @@ table {
 }
 
 #update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"] {
+#add_user .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -143,53 +143,4 @@ table {
     border-radius: .6em;
 }
 
-#update_user .form-group .radio,
-#add_user .form-group .radio {
-    margin: 1em 2em;
-}
-
-.radio input[text='radio']+.radio-label:before {
-    content: "";
-    background: var(--border-btn);
-    border-radius: 100%;
-    border: 1px solid var(--border);
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    position: relative;
-    top: -0em;
-    margin-right: .5em;
-    vertical-align: top;
-    cursor: pointer;
-    text-align: center;
-    -webkit-transform: all 250ms ease;
-    transition: all 250ms ease;
-}
-
-.radio input[text='radio']:checked+.radio-label:before {
-    background-color: #16db93;
-    box-shadow: inset 0 0 0 4px #e9ecef;
-}
-
-.radio input[text='radio']:focus+.radio-label:before {
-    outline: none;
-    border-color: #16db93;
-}
-
-#update_user .form-group .btn,
-#add_user .form-group .btn {
-    width: 100%;
-    padding: .7em 1em;
-    background-color: #16db93;
-    font-family: 'PT Sans', 'Sans serif';
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: .6em;
-    margin: .5em 0;
-}
-
-#update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover {
-    background-color: var(--dark);
-    color: var(--border)
-}
+#update_user .form-group ra
