@@ -101,33 +101,14 @@ table {
 }
 
 .table tr:hover {
-    background-color: var(--border);
+    background-color: #06d6a0;
 }
 
 .table td:hover td>a {
     box-shadow: none;
 }
 
-.table .thead-dark th {
+.table .thead-dark th{
     color: #fff;
     background-color: var(--dark);
-    border-color: #32383e;
-}
-
-.form-title{
-    margin-top: 2em;
-}
-
-.form-title >h2{
-    padding: .5em 0;
-}
-
-.new_user{
-    max-width: 786px;
-    margin: auto;
-}
-
-#update_user .form-group,
-#add_user .form-group{
-    margin: .4em 0;
 }

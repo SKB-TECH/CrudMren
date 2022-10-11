@@ -101,7 +101,7 @@ table {
 }
 
 .table tr:hover {
-    background-color: var(--border);
+    background-color:var(--li);
 }
 
 .table td:hover td>a {
@@ -112,22 +112,4 @@ table {
     color: #fff;
     background-color: var(--dark);
     border-color: #32383e;
-}
-
-.form-title{
-    margin-top: 2em;
-}
-
-.form-title >h2{
-    padding: .5em 0;
-}
-
-.new_user{
-    max-width: 786px;
-    margin: auto;
-}
-
-#update_user .form-group,
-#add_user .form-group{
-    margin: .4em 0;
 }

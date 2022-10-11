@@ -127,7 +127,6 @@ table {
     margin: auto;
 }
 
-#update_user .form-group,
-#add_user .form-group{
+#update_user .form-group{
     margin: .4em 0;
 }

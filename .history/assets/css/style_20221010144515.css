@@ -114,20 +114,24 @@ table {
     border-color: #32383e;
 }
 
-.form-title{
-    margin-top: 2em;
-}
+@media only screen and (max-width:1024px) {
 
-.form-title >h2{
-    padding: .5em 0;
-}
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
 
-.new_user{
-    max-width: 786px;
-    margin: auto;
-}
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
 
-#update_user .form-group,
-#add_user .form-group{
-    margin: .4em 0;
+    tr{
+        border: 1px solid var(--border);
+    }
 }

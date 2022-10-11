@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CRUD APPLICATION</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Gestion des utilisateurs</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+    <!-- Main  -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify=between ">
+                <div class="filteer">
+                    <a href="/">All Users</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">New User</h2>
+                <span class="text-light">Use the below form to create a new account</span>
+            </div>
+
+            <!-- Form handling -->
+             <form action="" method="POST" id="update_user">
+                <div class="new_user">
+                    <!-- nom de l'utilisateur -->
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name : </label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" placeholder="ShakoKinyamba@gmail.com">
+                    </div>
+                    <!-- adresse mail -->
+                    <div class="form-group">
+                        <label for="name" class="text-light">Adresse Email : </label>
+                        <input type="text" name="email" placeholder="ShakoKinyamba@gmail.com">
+                    </div>
+                    <!-- Sexe de l'agent -->
+                    <div class="form-group">
+                        <label for="name" class="text-light">Gender : </label>
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Masculin">
+                            <label for="gender" class="text-light">Masculin</label>
+                        </div>
+
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Feminin">
+                            <label for="gender" class="text-light">Feminin</label>
+                        </div>
+                    </div>
+
+                    <!-- le statut -->
+                    <div class="form-group">
+                        <label for="name" class="text-light">Statut : </label>
+                        <div class="radio inline">
+                            <input type="radio" name="statut" value="Active">
+                            <label for="statut" class="text-light">Active</label>
+                        </div>
+
+                        <div class="radio inline">
+                            <input type="radio" name="statut" value="Inactive">
+                            <label for="statut" class="text-light">Inactive</label>
+                        </div>
+                    </div>
+                    <!-- fin Statut -->
+
+                    <!-- Submit -->
+                    <div class="form-group">
+                        <button>C</button>
+                    </div>
+                </div>
+             </form>
+            <!-- /Form handling -->
+        </div>
+    </main>
+    <!-- /Main -->
+</body>
+
+</html>

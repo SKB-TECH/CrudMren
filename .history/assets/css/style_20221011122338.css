@@ -124,10 +124,5 @@ table {
 
 .new_user{
     max-width: 786px;
-    margin: auto;
-}
-
-#update_user .form-group,
-#add_user .form-group{
-    margin: .4em 0;
+    margin: ;
 }
