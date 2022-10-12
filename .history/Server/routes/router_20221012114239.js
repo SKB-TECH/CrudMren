@@ -10,11 +10,7 @@ route.get('/add_user', services.add_user)
 route.get('/update_user', services.update_user)
 
 
-// Chemins d'API
+//API
 route.post('/api/users', controller.create);
-route.get('/api/users', controller.find);
-route.delete('/api/users/:id', controller.delete);
-route.put('/api/users/:id', controller.update);
-
-
+route.delete('/api/users', controller.delete);
 module.exports = route

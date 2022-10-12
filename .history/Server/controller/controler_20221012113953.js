@@ -1,0 +1,11 @@
+const userModel = require('../model/model')
+
+//enregistrement d'un nouveau user
+exports.create = (req, res) => {
+
+}
+
+//visualisa
+exports.find=(req,res)=>{
+
+}
