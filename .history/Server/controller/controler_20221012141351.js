@@ -34,7 +34,7 @@ exports.find = (req, res) => {
     })
 
     .catch(error=>{
-        res.send(error.message||"some porbleme")
+        res.send
     })
 }
 

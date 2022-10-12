@@ -15,27 +15,15 @@ exports.create = (req, res) => {
         statut: req.body.statut
     })
     userNew
-        .save(userNew)
-        .then(data => {
-            res.send(data)
-        })
-        .catch(error => {
-            res.status(500).send({
-                message: error.message || "some error occured while creating a create operation"
-            })
-        })
+    .save(userNew)
+    .then(data=>{
+        res.send(data)
+    })
 }
 
 //visualisation de tous des utilisateurs
 exports.find = (req, res) => {
-    userModel.find()
-    .then(user=>{
-        res.send(user)
-    })
 
-    .catch(error=>{
-        res.send(error.message||"some porbleme")
-    })
 }
 
 // mettre a jour des donnees 

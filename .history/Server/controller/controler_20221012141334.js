@@ -32,10 +32,6 @@ exports.find = (req, res) => {
     .then(user=>{
         res.send(user)
     })
-
-    .catch(error=>{
-        res.send(error.message||"some porbleme")
-    })
 }
 
 // mettre a jour des donnees 

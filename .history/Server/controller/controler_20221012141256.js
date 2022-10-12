@@ -29,13 +29,7 @@ exports.create = (req, res) => {
 //visualisation de tous des utilisateurs
 exports.find = (req, res) => {
     userModel.find()
-    .then(user=>{
-        res.send(user)
-    })
-
-    .catch(error=>{
-        res.send(error.message||"some porbleme")
-    })
+    .then()
 }
 
 // mettre a jour des donnees 
