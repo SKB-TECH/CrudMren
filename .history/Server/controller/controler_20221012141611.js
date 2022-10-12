@@ -29,23 +29,18 @@ exports.create = (req, res) => {
 //visualisation de tous des utilisateurs
 exports.find = (req, res) => {
     userModel.find()
-        .then(user => {
-            res.send(user)
-        })
+    .then(user=>{
+        res.send(user)
+    })
 
-        .catch(error => {
-            res.status(500).send({ message: error.message || "some porbleme" })
-        })
+    .catch(error=>{
+        res.status(500).send(message:error.message||"some porbleme")
+    })
 }
 
 // mettre a jour des donnees 
 exports.update = (req, res) => {
-    if (!req.body) {
-        return res
-            .status(500)
-            .send({ message: "Data update can not empty" })
-    }
-    const id = req.params.id;
+
 }
 
 // Suppression des donnees 

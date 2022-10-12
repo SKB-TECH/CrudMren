@@ -42,10 +42,9 @@ exports.find = (req, res) => {
 exports.update = (req, res) => {
     if (!req.body) {
         return res
-            .status(500)
-            .send({ message: "Data update can not empty" })
+        .status(500)
+        
     }
-    const id = req.params.id;
 }
 
 // Suppression des donnees 
