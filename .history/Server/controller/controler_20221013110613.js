@@ -28,32 +28,7 @@ exports.create = (req, res) => {
 
 //visualisation de tous des utilisateurs
 exports.find = (req, res) => {
-    if (req.query.id) {
-        const id = req.query.id
-        userModel.findById(id)
-            .then(data => {
-                if (!data) {
-                    res.status(500).send({ message: `not user find with ${id}` })
-                }
-                else {
-                    res.send(data)
-                }
-            })
-            .catch(error => {
-                if (error) {
-                    res.status(404).send({ message: 'some things went wrong' })
-                }
-            })
-    }
-    else {
-        userModel.find()
-            .then(user => {
-                res.send(user)
-            })
-            .catch(error => {
-                res.status(500).send({ message: error.message || "some porbleme" })
-            })
-    }
+    if
 }
 
 // mettre a jour des donnees 
