@@ -1,0 +1,95 @@
+const userModel = require('../model/model');
+const { use } = require('../routes/router');
+
+//enregistrement d'un nouveau user
+exports.create = (req, res) => {
+    if (!req.body) {
+        res.status(400).send({ message: 'La requete doit contenir des donnees' });
+        return;
+    }
+    //new user
+    const userNew = new userModel({
+        name: req.body.name,
+        email: req.body.email,
+        sexe: req.body.sexe,
+        statut: req.body.statut
+    })
+    userNew
+        .save(userNew)
+        .then(data => {
+            res.send(data)
+            res.redict
+        })
+        .catch(error => {
+            res.status(500).send({
+                message: error.message || "some error occured while creating a create operation"
+            })
+        })
+}
+
+//visualisation de tous des utilisateurs
+exports.find = (req, res) => {
+    if (req.query.id) {
+        const id = req.query.id
+        userModel.findById(id)
+            .then(data => {
+                if (!data) {
+                    res.status(500).send({ message: `not user find with ${id}` })
+                }
+                else {
+                    res.send(data)
+                }
+            })
+            .catch(error => {
+                if (error) {
+                    res.status(404).send({ message: 'some things went wrong' })
+                }
+            })
+    }
+    else {
+        userModel.find()
+            .then(user => {
+                res.send(user)
+            })
+            .catch(error => {
+                res.status(500).send({ message: error.message || "some porbleme" })
+            })
+    }
+}
+
+
+// mettre a jour des donnees 
+exports.update = (req, res) => {
+    if (!req.body) {
+        return res
+            .status(500)
+            .send({ message: "Data update can not empty" })
+    }
+    const id = req.params.id;
+    userModel.findByIdAndUpdate(id, req.body, { useFindAndUpdate: false })
+        .then(data => {
+            if (!data) {
+                res.status(404).send({ message: `can not update with ${id} may be user not found` })
+            }
+            else {
+                req.send(data)
+            }
+        })
+        .catch(error => { })
+}
+
+// Suppression des donnees 
+exports.delete = (req, res) => {
+    const id = req.params.id;
+    userModel.findByIdAndDelete(id)
+        .then(data => {
+            if (!data) {
+                res.status(404).send({ message: `can not delete a user with ${id} is wrong` })
+            }
+            else
+                res.send({ message: 'user was deleting success !!!' })
+        })
+        .catch(error => {
+            res.status(404).send({ message: 'error to delete a one user' })
+        })
+}

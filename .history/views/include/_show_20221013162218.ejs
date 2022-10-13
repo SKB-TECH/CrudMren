@@ -1,0 +1,25 @@
+<% for(let i=0; i<users.length;i++){%>
+<tr>
+    <td><%= i+1 %> </td>
+    <td><%= users[i].name %>  </td>
+    <td><%= users[i].email %> </td>
+    <td><%= users[i].sexe %> </td>
+    <td><%= users[i].statut %> </td>
+    <td>
+        <a href="#" class="btn border-shadow update">
+            <span class="text-gradient">
+                <a href="/update_user?">
+                <i class="fas fa-pencil-alt"></i>
+            </a>
+            </span>
+        </a>
+
+        <a href="#" class="btn border-shadow delete">
+            <span class="text-gradient">
+                <i class="fas fa-times"></i>
+            </span>
+        </a>
+    </td>
+</tr>
+<% } %>
+ 
