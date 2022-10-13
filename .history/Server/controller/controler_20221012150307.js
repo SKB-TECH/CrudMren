@@ -32,6 +32,7 @@ exports.find = (req, res) => {
         .then(user => {
             res.send(user)
         })
+
         .catch(error => {
             res.status(500).send({ message: error.message || "some porbleme" })
         })
@@ -45,29 +46,11 @@ exports.update = (req, res) => {
             .send({ message: "Data update can not empty" })
     }
     const id = req.params.id;
-    userModel.findByIdAndUpdate(id, req.body, { useFindAndUpdate: false })
-        .then(data => {
-            if (!data) {
-                res.status(404).send({ message: `can not update with ${id} may be user not found` })
-            }
-            else {
-                req.send(data)
-            }
-        })
-        .catch(error => { })
+
 }
 
 // Suppression des donnees 
 
 exports.delete = (req, res) => {
-    const id = req.params.id;
-    userModel.findByIdAndDelete(id)
-        .then(data => {
-            if (!data) {
-                res.status(404).send({ message: `can not delete a user with ${id} is wrong` })
-            }
-            else
-                res.send({ message: 'user was deleting success !!!' })
-        })
-        .catch(error => { })
+
 }

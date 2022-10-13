@@ -60,14 +60,5 @@ exports.update = (req, res) => {
 // Suppression des donnees 
 
 exports.delete = (req, res) => {
-    const id = req.params.id;
-    userModel.findByIdAndDelete(id)
-        .then(data => {
-            if (!data) {
-                res.status(404).send({ message: `can not delete a user with ${id} is wrong` })
-            }
-            else
-                res.send({ message: 'user was deleting success !!!' })
-        })
-        .catch(error => { })
+
 }
